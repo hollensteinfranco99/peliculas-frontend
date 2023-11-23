@@ -1,0 +1,211 @@
+/*carrusel*/
+.mySwiper {
+    overflow: visible !important;
+    z-index: auto !important;
+    margin: 20px !important;
+    margin-left: 20px !important;
+    /*padding: 20px 280px 20px 50px !important;*/
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    padding: 30px;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    z-index: 1000 !important;
+    font-weight: bolder !important;
+}
+
+:root {
+    --swiper-navigation-size: 20px !important;
+}
+
+/* contenedor imagen */
+.mySwiper .contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: object-position 0.4s;
+    transition-delay: 0.4s;
+    border-radius: 9px;
+}
+
+/*.mySwiper .contenedor:hover img {
+    object-position: top;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}*/
+
+/*contenido dentro de la tarjeta cuerpo*/
+
+.mySwiper .contenedor {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    border-radius: 9px;
+    transition: 0.4s;
+    transition-property: width, box-shadow, transform, height;
+    transition-delay: 0.4s;
+}
+
+/*.mySwiper .contenedor:hover {
+    height: 250px;
+    width: calc(100% + 30px);
+    box-shadow: black 0px 0px 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transform: translate(-5%, -9%);
+}*/
+
+/*.mySwiper .contenedor:hover .tarjeta-cuerpo {
+    display: block;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}*/
+
+/* tarjeta cuerpo */
+.tarjeta-cuerpo {
+    display: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    padding: 10px;
+    width: 100%;
+}
+
+.index {
+    z-index: 1000 !important;
+}
+
+/* slide swipperJS */
+.agrandar {
+    z-index: 100000;
+}
+
+.swiper-slide {
+    /*margin-right: 10px;*/
+    left: 0px;
+    transition: left 0.4s !important;
+    transition-delay: 0.4s !important;
+    height: 150px !important;
+}
+
+/*.swiper-slide:hover {
+    z-index: 900 !important;
+    /* al achicar la pantalla, poner position left. para centrarlo*/
+/*}*/
+
+.swiper-wrapper {
+    /*transition: transform 1.3s cubic-bezier(0.65, 0, 0.35, 1) !important;*/
+    transition: transform 1.3s cubic-bezier(0.65, 0, 0.35, 1) !important;
+}
+
+/* Botones */
+.btn-play {
+    width: 3rem;
+}
+
+.btn-play button {
+    background-color: white;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    transition: 0.2s;
+    margin-bottom: 10px;
+}
+
+.btn-play button:hover {
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.icon-play {
+    position: relative;
+    left: 1px;
+}
+
+.btn-check-mas {
+    background-color: rgba(51, 51, 51, 255);
+    border: none;
+    color: rgb(245, 245, 245);
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    margin-right: 3px;
+}
+
+.btn-check-mas:hover {
+    color: rgba(51, 51, 51, 255);
+    background-color: white;
+}
+
+.tarjeta-cuerpo .primer-cuerpo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.txt-reproducir {
+    font-size: 18px;
+    margin-right: auto;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.icon-check {
+    border-radius: 50%;
+    border: none;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3px;
+    color: #00050d;
+}
+
+.txt-prime {
+    display: flex;
+    align-items: center;
+
+}
+.swiper-slide:hover {
+    z-index: 900 !important;
+    /* al achicar la pantalla, poner position left. para centrarlo*/
+}
+
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 769px) {
+/* contenedor imagen */
+.mySwiper .contenedor:hover img {
+    object-position: top;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+/*contenido dentro de la tarjeta cuerpo*/
+.mySwiper .contenedor:hover {
+    height: 250px;
+    width: calc(100% + 30px);
+    box-shadow: black 0px 0px 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transform: translate(-5%, -9%);
+}
+
+.mySwiper .contenedor:hover .tarjeta-cuerpo {
+    display: block;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+}

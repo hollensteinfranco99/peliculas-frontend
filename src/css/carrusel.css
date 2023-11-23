@@ -1,0 +1,87 @@
+.carrusel .swiper-slide{
+    height: 85vh !important;
+}
+
+.contenedor-item{
+    position: relative;
+    height: 100%;
+}
+.contenedor-img{
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    display: flex;
+}
+.contenedor-img::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(2,1,23);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 36%, rgba(0, 0, 0, 0) 55%);
+}
+.contenedor-img img{
+    width: 70rem;
+    object-fit: cover;
+    object-position: center;
+}
+.contenedor-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    width: 380px;
+    height: 100%;
+    margin-left: 10rem;
+}
+.contenedor-texto img{
+    width: 500px;
+    opacity: 0.9;
+}
+.contenedor-reproducir{
+    position: absolute;
+    color: white;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    width: 380px;
+    margin-left: 10rem;
+    bottom: 20px;
+}
+.reproducir{
+    display: flex;
+    margin-right: 4rem;
+    align-items: center;
+}
+.reproducir span{
+    font-size: 22px;
+}
+.reproducir .btn-play{
+    width: 4.2rem;
+    height: 4.2rem;
+}
+.reproducir .btn-play button{
+    width: 3.5rem;
+    height: 3.5rem;
+}
+.reproducir .btn-play button:hover{
+    width: 3.8rem;
+    height: 3.8rem;
+}
+.check-add{
+    display: flex;
+    align-items: center;
+}
+
+
+/* ============ Medias ===================*/
+
+
+@media (max-width: 769px){
+    .desc-carrusel, .titulo-carrusel{
+        display: none;
+    }
+}

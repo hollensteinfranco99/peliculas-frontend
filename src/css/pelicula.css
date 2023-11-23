@@ -1,0 +1,123 @@
+.modal-dialog {
+    max-width: 55rem !important;
+    background: #00050d;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(160, 160, 160, 0.461);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(160, 160, 160, 0.461);
+    box-shadow: 0px 0px 25px 0px rgba(160, 160, 160, 0.461);
+    border-radius: var(--bs-modal-border-radius);
+}
+
+.modal-content {
+    height: 100%;
+    width: 100%;
+    background: #00050d;
+    border: 0px;
+}
+
+.modal-body {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.modal-header .btn-close {
+    background-color: rgb(255, 253, 253);
+    opacity: 1;
+    margin-bottom: 3px;
+    border-radius: 50%;
+}
+
+.modal-header {
+    border: 0px;
+}
+
+.contenedor-img-modal {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.contenedor-img-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0px -240px;
+}
+
+.contenedor-img-modal span {
+    display: block !important;
+}
+
+.contenedor-cartel::before {
+    content: "";
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(rgba(255, 255, 255, 0) 45%, rgb(25, 25, 25))
+}
+
+.contenedor-cartel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* ============= texto y boton dentro de img ============== */
+.contenedor-cartel .titulo-modal {
+    position: absolute;
+    bottom: 3.6rem;
+    left: 1rem;
+    font-size: 45px;
+    font-weight: 400;
+    z-index: 110;
+}
+
+.cont-botones-modal {
+    z-index: 120;
+    position: absolute;
+    bottom: 1.2rem;
+    left: 1rem;
+}
+
+.cont-botones-modal button {
+    margin-left: 5px;
+}
+
+.contenedor-info p,
+.contenedor-info span {
+    font-weight: 400;
+    line-height: 2.1rem;
+}
+
+.a-genero {
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+}
+
+.a-genero:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.li-genero {
+    font-weight: 400;
+    color: rgb(159, 159, 159);
+    list-style: none;
+    margin-right: 5px;
+}
+
+.generos-modal {
+    padding: 0;
+    margin: 5px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.reproductor{
+    width: 40%;
+    height: 20rem;
+}
+

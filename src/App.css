@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+/*=============== Body ====================*/
+
+body{
+    height: 100vh !important;
+    background: #00050d !important;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    box-sizing:border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/*================ Navegador ========================*/
+.logo-nav {
+    width: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navegador {
+    background-color: #00050d;
+}
+.nav-link {
+    text-decoration: none;
+    /**/
+    color: rgba(242, 244, 246, .9);
+    color: rgb(211, 214, 217);
+    font-size: 17px !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-link.active {
+    text-decoration: underline;
 }
 
-.App-link {
-  color: #61dafb;
+/*========== buscador =============*/
+.buscador {
+    background-color: rgb(24, 34, 43);
+    font-size: 17px;
+    padding: 7px;
+    color: #8197a4;
+    border: solid 1px rgba(129, 151, 164, .5);
+    width: 100%;
+    padding-left: 30px;
+}
+.contenedor-input{
+    position: relative;
+}
+.contenedor-buscar{
+    width: 200px;
+    position: relative;
+    right: 10px;
+    bottom: 0px;
+    display: flex;
+    transition: all 1s cubic-bezier(0.68,-0.10,0.265,1);
+}
+.contenedor-buscar.active{
+    width: 80%;
+}
+.buscador:focus {
+    color: white;
+}
+.icon-buscar{
+    
+}
+.icon-buscar{
+    position: absolute;
+    left: 6px;
+    bottom: 12px;
+    margin: auto;
+    z-index: 10;
+    border: 0px;
+    background-color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-cerrar {
+    margin: auto;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.contenedor-subtitulos{
+    display: flex;
+    align-items: center;
+    margin-bottom:0px ;
+    margin-top: 40px;
+    padding: 0px;
+}
+.subtitulos{
+    font-size: 28px;
+}
+
+
+
+/*========= menu desplegable ===========*/
+.menudesplegable{
+    display: none !important;
+}
+.menudesplegable-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 200;
+}
+
+.menudesplegable-item {
+    background-color: rgb(26, 36, 47);
+    padding: 10px;
+    display: block;
+    color: white !important;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.menudesplegable-item:hover {
+    background-color: rgb(47, 62, 81);
+}
+
+.menudesplegable-item.active {
+    text-decoration: underline;
+}
+
+
+/*============= prueba ===============*/
+/*.nav-link {
+    display: none !important;
+}*/
+
+
+
+
+/* RESPONSIVE
+   ========================================================================= */
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 320px) {
+}
+
+/* Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (min-width:321px) and (max-width: 768px) {
+    .nav-link{
+        display: none !important;
+    }
+    .menudesplegable{
+        display: block !important;
+    }
+
+    /**/
+    .contenedor-buscar{
+        width: 20px;
+        bottom: 5px;
+        right: 30px;
+        
+        position: absolute;
+        margin: 3px;
+    }
+    .contenedor-input{
+        width: 100%;
+        top: 0px;
+    }
+    .icon-buscar{
+        position: absolute;
+        /*left: 10px;
+        cursor: pointer;*/
+        z-index: 20;
+    }
+
+    .buscador{
+        border: 0px;
+    }
+}
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+@media (min-width: 769px)and(max-width: 1024px) {
+
+}
+
+/* Escritorios muy anchos
+   ------------------------------------------------------------------------- */
+@media (min-width: 1025px) and (max-width: 1200px) {
+
 }
