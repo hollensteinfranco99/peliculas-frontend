@@ -130,11 +130,11 @@ const ModalPelicula = (props) => {
                         </section>
                         <section className='contenedor-info container row'>
 
-                            <article className='col-7 ' aria-label='overview'>
+                            <article className='col-lg-6 col-md-6 col-sm-12' aria-label='overview'>
                                 <p className='lead p-4'>{movie.overview}</p>
                             </article>
 
-                            <article aria-label='reparto' className='col-5 p-4 d-flex flex-column'>
+                            <article aria-label='reparto' className='col-lg-6 col-md-6 col-sm-12 p-4 d-flex flex-column'>
                                 <div className='d-flex'>
                                     <span className='lead li-genero'>Fecha de lanzamiento: </span>
                                     <span className='lead'>{movie.release_date}</span>

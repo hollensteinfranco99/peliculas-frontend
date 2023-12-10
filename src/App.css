@@ -1,5 +1,8 @@
 /*=============== Body ====================*/
-
+@font-face {
+    font-family: 'fuenteLoader'; /* Nombre de la fuente que quieras asignar */
+    src: url('fonts/JMH\ Savage.otf') format('opentype'); /* Ruta correcta al archivo OTF */
+}
 body{
     height: 100vh !important;
     background: #00050d !important;

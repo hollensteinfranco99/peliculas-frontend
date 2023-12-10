@@ -81,7 +81,7 @@
 
 
 @media (max-width: 769px){
-    .desc-carrusel, .titulo-carrusel{
+    .carrusel{
         display: none;
     }
 }
