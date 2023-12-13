@@ -80,7 +80,7 @@
 /* ============ Medias ===================*/
 
 
-@media (max-width: 769px){
+@media (max-width: 900px){
     .carrusel{
         display: none;
     }
