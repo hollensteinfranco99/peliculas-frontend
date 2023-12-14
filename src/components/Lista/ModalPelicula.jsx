@@ -120,7 +120,7 @@ const ModalPelicula = (props) => {
                     <section>
                         <section className='contenedor-cartel'>
                             <article className='contenedor-img-modal'>
-                                <LazyLoadImage effect='blur' src={obtenerURLImagen(movie.poster_path)} alt="" />
+                                <LazyLoadImage className='img' effect='blur' src={obtenerURLImagen(movie.poster_path)} alt="" />
                             </article>
                             <h2 className='titulo-modal'>{movie.title}</h2>
                             <article className='cont-botones-modal'>

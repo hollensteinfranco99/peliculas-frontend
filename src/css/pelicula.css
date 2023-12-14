@@ -37,16 +37,16 @@
     overflow: hidden;
 }
 
-.contenedor-img-modal img {
+.contenedor-img-modal .img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 0px -240px;
+    /*object-position: 0px -240px;*/
 }
 
-.contenedor-img-modal span {
+/*.contenedor-img-modal span {
     display: block !important;
-}
+}*/
 
 .contenedor-cartel::before {
     content: "";
@@ -121,3 +121,17 @@
     height: 20rem;
 }
 
+
+/* Móviles o tablets en vertical
+   ------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .contenedor-cartel .titulo-modal {
+        font-size: 1.9rem;
+    }
+    .contenedor-img-modal {
+        height: 40vh;
+    }
+    .contenedor-info li,.contenedor-info span,.contenedor-info p {
+        font-size: 1.1rem !important;
+    }
+}
