@@ -1,16 +1,17 @@
 /*carrusel*/
 .mySwiper {
-    overflow: visible !important;
     z-index: auto !important;
     margin: 1.5rem !important;
     margin-left: 1.5rem !important;
     /*padding: 20px 280px 20px 50px !important;*/
-
+}
+/*.mySwiper.escritorio{
+    overflow: visible !important;
 }
 
 body {
     overflow-x: hidden;
-}
+}*/
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -42,22 +43,43 @@ body {
 .mySwiper .contenedor {
     position: relative;
     width: 100%;
-    height: 11rem;
+    /*height: 11rem;*/
     border-radius: 9px;
-    transition: 0.4s;
-    transition-property: width, box-shadow, transform, height;
-    transition-delay: 0.4s;
 }
 
 
 /* tarjeta cuerpo */
 .tarjeta-cuerpo {
-    display: none;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.624);
     color: white;
     position: absolute;
-    padding: 10px;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    transition: all ease 0.5s;
+    transform: perspective(600px) rotateY(180deg);
+    backface-visibility: hidden;
+    opacity:0;
+}
+.contenedor-info-card-inicio{
+    margin: 1rem;
+}
+.contenedor:hover .tarjeta-cuerpo{
+    backface-visibility: visible;
+    opacity: 1;
+}
+.contenedor-darVuelta-card{
+    transition: all ease 0.5s;
+    transform-style: preserve-3d;
+    transform: perspective(600px) rotateY(0deg);
+    height: 100%;
+}
+.contenedor:hover .contenedor-darVuelta-card{
+    -o-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg) ;
+    -webkit-transform: perspective(600px) rotateY(180deg) ;
+    transform: perspective(600px) rotateY(180deg) ;
 }
 
 .index {
@@ -129,6 +151,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 100%;
 }
 
 .txt-reproducir {
@@ -165,27 +188,22 @@ body {
 
 
 /* contenedor imagen */
-.mySwiper .contenedor:hover img {
+/*.mySwiper .contenedor:hover img {
     object-position: top;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-}
+}*/
 
 /*contenido dentro de la tarjeta cuerpo*/
-.mySwiper .contenedor:hover {
+/*.mySwiper .contenedor:hover {
     height: 250px;
     width: calc(100% + 30px);
     box-shadow: black 0px 0px 12px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     transform: translate(-5%, -9%);
-}
+}*/
 
-.mySwiper .contenedor:hover .tarjeta-cuerpo {
-    display: block;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
-}
 
 /* Tablets en horizonal y escritorios normales
    ------------------------------------------------------------------------- */

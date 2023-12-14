@@ -35,10 +35,14 @@ const CardCarousel = (props) => {
         <Fragment>
             <div id={`${props.categoria}${props.index}`}
                 onMouseOut={(e) => desenfocar(e)} onMouseOver={(e) => enfocar(e)} className='contenedor'>
+                    <div className='contenedor-darVuelta-card'>
                 <LazyLoadImage src={obtenerURLImage(props.pelicula[0].poster_path)} alt={props.pelicula[0].title} />
+                    
                 <div className='tarjeta-cuerpo'>
                     <section className='primer-cuerpo'>
-
+                    <article className='contenedor-info-card-inicio w-100 text-center'>
+                                <h4 className='card-titulo'>{props.pelicula[0].title}</h4>
+                        </article>
                         <article aria-label='incluye-prime' className='txt-prime w-100 mb-2 ms-1'>
                             <div className='bg-info icon-check'>
                                 <FontAwesomeIcon className='fa-xs' icon={faCheck}></FontAwesomeIcon>
@@ -64,11 +68,10 @@ const CardCarousel = (props) => {
                                 <FontAwesomeIcon icon={faEllipsisVertical}></FontAwesomeIcon>
                             </button>
                         </article>
-                        <article className='contenedor-info-card-inicio w-100 text-center'>
-                                <h4 className='card-titulo'>{props.pelicula[0].title}</h4>
-                        </article>
+
                     </section>
 
+                </div>
                 </div>
             </div>
         </Fragment>
