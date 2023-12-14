@@ -35,17 +35,6 @@ const Inicio = () => {
                     <CarouselOfCards key={index} idGenero={generos[index].id} categoria={generos[index].name}></CarouselOfCards>
                 </article>
             )
-            /*if(index == 2){
-                    listaGeneros.push(
-                        <article key={index} aria-label='carrusel-card-grande'>
-                        <div className='contenedor-subtitulos'>
-                            <h2 className='text-info ms-5 subtitulos'>Prime</h2>
-                            <h2 className='ms-2 subtitulos'>Seguir viendo</h2>
-                        </div>
-                        <CardGrandeCarrusel key={generos[index].id}></CardGrandeCarrusel>
-                    </article>
-                    )
-            }*/
         }
         return listaGeneros;
     }

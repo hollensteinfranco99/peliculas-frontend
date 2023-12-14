@@ -2,8 +2,8 @@
 .mySwiper {
     overflow: visible !important;
     z-index: auto !important;
-    margin: 20px !important;
-    margin-left: 20px !important;
+    margin: 1.5rem !important;
+    margin-left: 1.5rem !important;
     /*padding: 20px 280px 20px 50px !important;*/
 
 }
@@ -14,7 +14,7 @@ body {
 
 .swiper-button-prev,
 .swiper-button-next {
-    padding: 30px;
+    padding: 2rem;
     color: white !important;
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 50%;
@@ -23,7 +23,7 @@ body {
 }
 
 :root {
-    --swiper-navigation-size: 20px !important;
+    --swiper-navigation-size: 1.8rem !important;
 }
 
 /* contenedor imagen */
@@ -31,44 +31,24 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: 30% 20%;
     transition: object-position 0.4s;
     transition-delay: 0.4s;
     border-radius: 9px;
 }
-
-/*.mySwiper .contenedor:hover img {
-    object-position: top;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-}*/
 
 /*contenido dentro de la tarjeta cuerpo*/
 
 .mySwiper .contenedor {
     position: relative;
     width: 100%;
-    height: 160px;
+    height: 11rem;
     border-radius: 9px;
     transition: 0.4s;
     transition-property: width, box-shadow, transform, height;
     transition-delay: 0.4s;
 }
 
-/*.mySwiper .contenedor:hover {
-    height: 250px;
-    width: calc(100% + 30px);
-    box-shadow: black 0px 0px 12px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    transform: translate(-5%, -9%);
-}*/
-
-/*.mySwiper .contenedor:hover .tarjeta-cuerpo {
-    display: block;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
-}*/
 
 /* tarjeta cuerpo */
 .tarjeta-cuerpo {
@@ -97,10 +77,6 @@ body {
     height: 150px !important;
 }
 
-/*.swiper-slide:hover {
-    z-index: 900 !important;
-    /* al achicar la pantalla, poner position left. para centrarlo*/
-/*}*/
 
 .swiper-wrapper {
     /*transition: transform 1.3s cubic-bezier(0.65, 0, 0.35, 1) !important;*/
@@ -207,5 +183,16 @@ body {
     display: block;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
+}
+}
+
+@media (max-width: 768px) {
+.swiper-button-prev,
+.swiper-button-next {
+    padding: 1.2rem;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.1rem !important;
 }
 }
