@@ -117,7 +117,9 @@ body {
     border-radius: 50%;
     margin-right: 3px;
 }
-
+.card-titulo{
+    font-size: 1.2rem;
+}
 .btn-check-mas:hover {
     color: rgba(51, 51, 51, 255);
     background-color: white;
@@ -159,9 +161,9 @@ body {
 }
 
 
-/* Tablets en horizonal y escritorios normales
-   ------------------------------------------------------------------------- */
-@media (min-width: 769px) {
+
+
+
 /* contenedor imagen */
 .mySwiper .contenedor:hover img {
     object-position: top;
@@ -184,7 +186,10 @@ body {
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
 }
-}
+
+/* Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- */
+
 
 @media (max-width: 768px) {
 .swiper-button-prev,
